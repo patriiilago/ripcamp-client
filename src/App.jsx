@@ -2,7 +2,7 @@ import React from "react"
 
 import axios from 'axios'
 import { Routes, Route } from "react-router-dom"
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Navigation from './Components/Navbar/Navbar'
 import HomePage from './Pages/HomePage/HomePage'
 import Projects from './Pages/Projectss/Projects'
