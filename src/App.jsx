@@ -3,7 +3,7 @@ import React from "react"
 import axios from 'axios'
 import { Routes, Route } from "react-router-dom"
 
-import Navbar from './Components/Navbar/Navbar'
+import Navigation from './Components/Navbar/Navbar'
 import HomePage from './Pages/HomePage/HomePage'
 import Projects from './Pages/Projectss/Projects'
 import AlumniList from './Pages/AlumniList/AlumniList'
@@ -19,7 +19,7 @@ function App() {
   return (
 
     <div className='App'>
-      <Navbar />
+      <Navigation />
       <Routes>
 
         <Route path="/" element={<HomePage />} />
