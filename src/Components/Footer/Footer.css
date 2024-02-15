@@ -1,7 +1,7 @@
 .Footer {
     text-align: center;
-    background-color: blue;
-    color: white;
+    background-color: light;
+    color: black;
     font-size: 1.5em;
     padding: 4px 0;
     position: fixed;
@@ -14,7 +14,7 @@
 }
 
 .FooterLink {
-    color: white;
+    color: black;
     text-decoration: none;
     font-family: sans-serif;
 }
