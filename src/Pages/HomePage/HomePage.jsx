@@ -1,10 +1,12 @@
+import './HomePage.css'
+
 
 const HomePage = () => {
 
 
     return (
 
-        <h1>RIPCAMP</h1>
+        <h1 className="HomePage">RIPCAMP</h1>
     )
 
 }
