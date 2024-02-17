@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import './AlumniList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Button, Card, NavLink } from "react-bootstrap"
+import AlumniCard from "../AlumniCard/AlumniCard"
 
 const API_URL = "http://localhost:5005/alumni"
 
@@ -47,7 +48,11 @@ const AlumniList = () => {
                                                 <p><strong>Is working?:</strong> {alumni.isWorking ? "Yes" : "No"}</p>
                                             </div>
                                             <div className="buttonContainer">
-                                                <Link to="/alumni-card">
+                                                <Link to={{
+                                                    pathname: "/alumni-card",
+                                                    state: { alumniInfo: alumni },
+                                                }}
+                                                >
                                                     <Button variant="outline-success"><strong>Request me!</strong> </Button>
                                                 </Link>
                                             </div>
