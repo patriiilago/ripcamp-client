@@ -47,7 +47,7 @@ const AlumniList = () => {
                                                 <p><strong>Is working?:</strong> {alumni.isWorking ? "Yes" : "No"}</p>
                                             </div>
                                             <div className="buttonContainer">
-                                                <Link to="/alumni-card">
+                                                <Link to={`/alumni/${alumni.id}`}>
                                                     <Button variant="outline-success"><strong>Request me!</strong> </Button>
                                                 </Link>
                                             </div>

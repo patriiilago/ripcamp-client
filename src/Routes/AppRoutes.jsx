@@ -18,7 +18,7 @@ const AppRoutes = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/alumni" element={<AlumniList />} />
-            <Route path="/alumni-card" element={<AlumniCard />} />
+            <Route path="/alumni/:alumniId" element={<AlumniCard />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<div> 404 | Not Found Page</div>} />
 
