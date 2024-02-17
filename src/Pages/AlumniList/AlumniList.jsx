@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import './AlumniList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container, Button, Card, NavLink } from "react-bootstrap"
+import AlumniCard from "../AlumniCard/AlumniCard"
 
 const API_URL = "http://localhost:5005/alumni"
 

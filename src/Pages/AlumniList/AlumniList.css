@@ -41,12 +41,14 @@ h1 {
 .alumniBody {
     display: flex;
     align-items: center;
+
 }
 
 .alumniContent {
     display: flex;
     flex: 1;
     align-items: center;
+
 }
 
 .alumniImg {
@@ -69,4 +71,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     margin-bottom: 200px;
+
+
 }
