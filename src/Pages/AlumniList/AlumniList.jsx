@@ -26,37 +26,35 @@ const AlumniList = () => {
             <Container className="AlumniListContainer">
 
                 <h1>Alumni List</h1>
-                <hr />
+
 
                 {
                     alumnis.map((alumni) => {
                         return (
 
-                            <Card border="succes" style={{ width: '30rem' }}>
-
-                                <Card.Header key={alumni.id}>
-                                    <Link to={`/alumni/${alumni.id}`} >
-                                        <img className="alumniImg" src={alumni.img} alt={alumni.id} />
-                                        <h5>{alumni.fullName.firstName} {alumni.fullName.lastName}</h5>
-                                    </Link>
-                                </Card.Header>
+                            <Card key={alumni.id} border="secondary" style={{ width: '50rem' }} className="card">
 
                                 <Card.Body>
-                                    <Link>
-                                        <div className="alumniP">
-                                            <Card.Text>
-                                                <p> Email: {alumni.contact.email}</p>
-                                                <p>Phone Number: {alumni.contact.phone}</p>
-                                                <p>Is working?: {alumni.isWorking ? "Yes" : "No"}</p>
-                                                <Link to="/alumni-card">
-                                                    <Button variant="outline-success" >Request me!</Button>
+                                    <div className="alumniBody">
+                                        <div className="alumniContent">
+                                            <img className="alumniImg" src={alumni.img} alt={alumni.id} />
+                                            <div className="alumniInfo">
+                                                <Link to={`/alumni/${alumni.id}`}>
+                                                    <h5>{alumni.fullName.firstName} {alumni.fullName.lastName}</h5>
                                                 </Link>
-                                            </Card.Text>
+                                                <p><strong>Email:</strong> {alumni.contact.email}</p>
+                                                <p><strong>Phone Number:</strong> {alumni.contact.phone}</p>
+                                                <p><strong>Is working?:</strong> {alumni.isWorking ? "Yes" : "No"}</p>
+                                            </div>
+                                            <div className="buttonContainer">
+                                                <Link to="/alumni-card">
+                                                    <Button variant="outline-success"><strong>Request me!</strong> </Button>
+                                                </Link>
+                                            </div>
                                         </div>
-                                    </Link>
-
-                                    <p></p>
+                                    </div>
                                 </Card.Body>
+
 
                             </Card>
 

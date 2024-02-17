@@ -20,6 +20,7 @@ const AppRoutes = () => {
             <Route path="/alumni" element={<AlumniList />} />
             <Route path="/alumni-card" element={<AlumniCard />} />
             <Route path="/about" element={<About />} />
+            <Route path="*" element={<div> 404 | Not Found Page</div>} />
 
         </Routes>
 

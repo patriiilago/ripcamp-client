@@ -7,9 +7,7 @@
     height: 150px;
     object-fit: cover;
     align-items: center;
-
 }
-
 
 .alumniP {
     display: flex;
@@ -21,9 +19,8 @@ a {
     color: inherit;
 }
 
-.alumniP p {
+.alumniBody p {
     margin-right: 80px;
-
 }
 
 .AlumniList {
@@ -31,9 +28,45 @@ a {
     align-items: center;
     height: 100vh;
     margin-top: 60px;
-
 }
 
 h1 {
     text-align: center;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.alumniBody {
+    display: flex;
+    align-items: center;
+}
+
+.alumniContent {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.alumniImg {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.alumniInfo {
+    flex: 1;
+}
+
+.buttonContainer {
+    margin-left: auto;
+}
+
+.AlumniListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
 }
