@@ -3,7 +3,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 import './AlumniList.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container } from "react-bootstrap"
+import { Container, Button, Card, NavLink } from "react-bootstrap"
 
 const API_URL = "http://localhost:5005/alumni"
 
@@ -32,19 +32,33 @@ const AlumniList = () => {
                     alumnis.map((alumni) => {
                         return (
 
-                            <article className="AlumniCard" key={alumni.id}>
-                                <Link to={`/alumni/${alumni.id}`} >
-                                    <img className="alumniImg" src={alumni.img} alt={alumni.id} />
-                                    <p className="alumniP">
-                                        <h2 >{alumni.fullName.firstName}</h2>
-                                        <p>{alumni.fullName.lastName}</p>
-                                        <p>{alumni.contact.email}</p>
-                                    </p>
-                                </Link>
-                                <p></p>
+                            <Card border="succes" style={{ width: '30rem' }}>
 
+                                <Card.Header key={alumni.id}>
+                                    <Link to={`/alumni/${alumni.id}`} >
+                                        <img className="alumniImg" src={alumni.img} alt={alumni.id} />
+                                        <h5>{alumni.fullName.firstName} {alumni.fullName.lastName}</h5>
+                                    </Link>
+                                </Card.Header>
 
-                            </article>
+                                <Card.Body>
+                                    <Link>
+                                        <div className="alumniP">
+                                            <Card.Text>
+                                                <p> Email: {alumni.contact.email}</p>
+                                                <p>Phone Number: {alumni.contact.phone}</p>
+                                                <p>Is working?: {alumni.isWorking ? "Yes" : "No"}</p>
+                                                <Link to="/alumni-card">
+                                                    <Button variant="outline-success" >Request me!</Button>
+                                                </Link>
+                                            </Card.Text>
+                                        </div>
+                                    </Link>
+
+                                    <p></p>
+                                </Card.Body>
+
+                            </Card>
 
                         )
 

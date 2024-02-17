@@ -6,13 +6,34 @@
     width: 200px;
     height: 150px;
     object-fit: cover;
+    align-items: center;
+
+}
+
+
+.alumniP {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.alumniP p {
+    margin-right: 80px;
+
 }
 
 .AlumniList {
-    border: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 60px;
+
 }
 
-.AlumniListContainer {
+h1 {
     text-align: center;
-    align-items: center;
 }
