@@ -2,53 +2,19 @@
     width: 100%;
 }
 
-.alumniImg {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    align-items: center;
-}
-
-.alumniP {
-    display: flex;
-    flex-direction: row;
-}
-
 a {
     text-decoration: none;
-    color: inherit;
-}
-
-.alumniBody p {
-    margin-right: 80px;
-}
-
-.AlumniList {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: 60px;
+    color: black;
 }
 
 h1 {
     text-align: center;
 }
 
-.card {
-    margin-bottom: 20px;
-}
-
-.alumniBody {
-    display: flex;
-    align-items: center;
-
-}
-
 .alumniContent {
     display: flex;
     flex: 1;
     align-items: center;
-
 }
 
 .alumniImg {
@@ -58,19 +24,6 @@ h1 {
     margin-right: 20px;
 }
 
-.alumniInfo {
-    flex: 1;
-}
-
 .buttonContainer {
     margin-left: auto;
-}
-
-.AlumniListContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 200px;
-
-
 }

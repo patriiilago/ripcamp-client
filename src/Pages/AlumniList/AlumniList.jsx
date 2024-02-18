@@ -19,21 +19,16 @@ const AlumniList = () => {
             .then(({ data }) => setAlumnis(data))
             .catch(err => console.log(err))
     }
+
+
     return (
-
         <div className="AlumniList">
-
-            <Container className="AlumniListContainer">
-
-                <h1>Alumni List</h1>
-
-
-                {
-                    alumnis.map((alumni) => {
+            <Container className="d-flex justify-content-center">
+                <div className="AlumniListContainer">
+                    <h1>Alumni List</h1>
+                    {alumnis.map((alumni, index) => {
                         return (
-
-                            <Card key={alumni.id} border="secondary" style={{ width: '50rem' }} className="card">
-
+                            <Card key={alumni.id} border="secondary" style={{ width: '55rem', marginBottom: '20px' }} className="card">
                                 <Card.Body>
                                     <div className="alumniBody">
                                         <div className="alumniContent">
@@ -42,9 +37,9 @@ const AlumniList = () => {
                                                 <Link to={`/alumni/${alumni.id}`}>
                                                     <h5>{alumni.fullName.firstName} {alumni.fullName.lastName}</h5>
                                                 </Link>
-                                                <p><strong>Email:</strong> {alumni.contact.email}</p>
-                                                <p><strong>Phone Number:</strong> {alumni.contact.phone}</p>
-                                                <p><strong>Is working?:</strong> {alumni.isWorking ? "Yes" : "No"}</p>
+                                                <span><strong> Email:</strong> {alumni.contact.email}</span>
+                                                <span><strong> Phone Number:</strong> {alumni.contact.phone}</span>
+                                                <span><strong> Is working?:</strong> {alumni.isWorking ? "Yes" : "No"}</span>
                                             </div>
                                             <div className="buttonContainer">
                                                 <Link to={`/alumni/${alumni.id}`}>
@@ -54,17 +49,14 @@ const AlumniList = () => {
                                         </div>
                                     </div>
                                 </Card.Body>
-
-
                             </Card>
-
                         )
-
-                    })
-
-                }
+                    })}
+                    {/* Agregar un margen inferior a la última tarjeta */}
+                    <div style={{ marginBottom: '80px' }}></div>
+                </div>
             </Container>
         </div>
-    )
-}
+    );
+};
 export default AlumniList

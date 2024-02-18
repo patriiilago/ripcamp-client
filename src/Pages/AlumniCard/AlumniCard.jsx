@@ -31,60 +31,69 @@ const AlumniCard = () => {
   }
 
   return (
-    <div className="AlumniCard">
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{ minHeight: "70vh" }}>
 
-      <h1>AQUIII ESTA LA CARD</h1>
+      <div className="AlumniCard">
 
-      <Card key={alumni.id} border="secondary" style={{ width: '50rem' }} className="card">
+        <h1>Alumni details</h1>
 
-        < Card.Img
+        <Card key={alumni.id} border="secondary" style={{ width: '30rem' }} className="card">
 
-          variant="top"
-          src={alumni.img}
-          alt={alumni.fullName.firstName}
-        />
+          < Card.Img
 
-        <Card.Body>
+            variant="top"
+            src={alumni.img}
+            alt={alumni.fullName.firstName}
+          />
 
-          <Card.Title>
-            <h3>
-              {alumni.fullName.firstName} {' '}
-              {alumni.fullName.lastName}
-            </h3>
+          <Card.Body>
 
-          </Card.Title>
+            <Card.Title>
+              <h3>
+                {alumni.fullName.firstName} {' '}
+                {alumni.fullName.lastName}
+              </h3>
 
-          <Card.Text>
-            <p>Phone: {alumni.contact.phone}</p>
-            <p>Contact: {alumni.contact.email}</p>
-            <p>City: {alumni.address.city}</p>
-            <p>Birth: {alumni.birth}</p>
-            <p>Languages:
-              {alumni.languages[0]}
+            </Card.Title>
+
+            <Card.Text>
+              <span> <strong>Phone: </strong> {alumni.contact.phone}</span>
               {' '}
-              {alumni.languages[1]}</p>
-            <p>{alumni.isWorking ? "Is working" : "No is working now"}</p>
+              <span> <strong> Contact: </strong> {alumni.contact.email}</span>
+              <span> <strong> City: </strong> {alumni.address.city}</span>
+              <span> <strong> Birth:</strong> {alumni.birth}</span>
+              <span>  <strong> Languages: </strong>
+                {alumni.languages[0]}
+                {' and '}
+                {alumni.languages[1]}</span>
+              {' '} <br />
+              <span> <strong> Is working?: </strong> {alumni.isWorking ? "Is working now" : "Is not working now"}</span>
 
-          </Card.Text>
+            </Card.Text>
 
-          <Button
-            className="btn btn-dark"
-            variant="btn btn-primary"
-            href={"/alumni"}
-          >
-            Back
-          </Button>
-          {' '}
-          <Button
-            className="btn btn-dark"
-            variant="btn btn-primary"
-          >
-            Request
-          </Button>
-        </Card.Body>
+            <Button
+              className="btn btn-dark"
+              variant="btn btn-primary"
+            >
+              Request to {alumni.fullName.firstName}
+            </Button>
 
-      </Card>
+            {' '}
 
+            <Button
+              className="btn btn-dark"
+              variant="btn btn-primary"
+              href={"/alumni"}
+            >
+              Back
+            </Button>
+
+          </Card.Body>
+
+        </Card>
+      </div>
     </div>
   )
 

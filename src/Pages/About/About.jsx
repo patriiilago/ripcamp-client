@@ -53,7 +53,7 @@ const About = () => {
                             size="sg"
                             href="/"
                         >
-                            Volver al inicio
+                            Back to Home
                         </Button>
 
                     </Col>
