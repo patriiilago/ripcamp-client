@@ -1,99 +1,92 @@
 
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios"
+import NotFoundPage from './../NotFoundPage/NotFoundPage'
 
-const AlumniCard = ({ alumniInfo }) => {
-  const { alumni } = alumniInfo
+const AlumniCard = () => {
+  const [alumni, setAlumnis] = useState({})
+
+
+  const { alumniId } = useParams()
+
+
+  useEffect(() => loadAlumni(), [alumniId])
+
+  const API_URL = `http://localhost:5005/alumni/${alumniId}`
+
+  const loadAlumni = () => {
+    axios
+      .get(`${API_URL}`)
+      .then(({ data }) => {
+        setAlumnis(data)
+      })
+      .catch(err => console.log(err))
+  }
+
+  if (!alumni || Object.keys(alumni).length === 0) {
+    return <NotFoundPage />
+  }
 
   return (
-    <Card key={alumni.id} border="secondary" style={{ width: '50rem' }} className="card">
-      <Card.Body>
-        <div className="alumniBody">
-          <div className="alumniContent">
-            <img className="alumniImg" src={alumni.img} alt={alumni.id} />
-            <div className="alumniInfo">
-              <h5>{alumni.fullName.firstName} {alumni.fullName.lastName}</h5>
-              <p><strong>Email:</strong> {alumni.contact.email}</p>
-              <p><strong>Phone Number:</strong> {alumni.contact.phone}</p>
-              <p><strong>Is working?:</strong> {alumni.isWorking ? "Yes" : "No"}</p>
-            </div>
-            <div className="buttonContainer">
-              <Link to="/alumni-list"> {/* Ajusta la ruta según tu configuración */}
-                <Button variant="outline-success">
-                  <strong>Back to Alumni List</strong>
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </Card.Body>
-    </Card>
-  );
-};
+    <div className="AlumniCard">
 
-export default AlumniCard;
+      <h1>AQUIII ESTA LA CARD</h1>
 
-// import React from "react"
-// import { Link } from "react-router-dom"
-// import { Card, Button } from "react-bootstrap"
+      <Card key={alumni.id} border="secondary" style={{ width: '50rem' }} className="card">
 
-// const AlumniCard = ({ AlumniInfo }) => {
-//     const { alumni } = alumniInfo
+        < Card.Img
 
-//     const navigate = useNavigate()
+          variant="top"
+          src={alumni.img}
+          alt={alumni.fullName.firstName}
+        />
 
-//     return (
-//         <div>
-//             <>
-//                 <Card style={{ width: '18rem' }}>
+        <Card.Body>
 
-//                     <Card.Img
+          <Card.Title>
+            <h3>
+              {alumni.fullName.firstName} {' '}
+              {alumni.fullName.lastName}
+            </h3>
 
-//                         variant="top"
-//                         src={alumni.img} alt={alumni.fullName.firstName}
-//                     />
+          </Card.Title>
 
-//                     <Card.Body>
+          <Card.Text>
+            <p>Phone: {alumni.contact.phone}</p>
+            <p>Contact: {alumni.contact.email}</p>
+            <p>City: {alumni.address.city}</p>
+            <p>Birth: {alumni.birth}</p>
+            <p>Languages:
+              {alumni.languages[0]}
+              {' '}
+              {alumni.languages[1]}</p>
+            <p>{alumni.isWorking ? "Is working" : "No is working now"}</p>
 
-//                         <Card.Title>
+          </Card.Text>
 
-//                             {alumni.fullName.firstName}
-//                             {alumni.fullName.lastName}
+          <Button
+            className="btn btn-dark"
+            variant="btn btn-primary"
+            href={"/alumni"}
+          >
+            Back
+          </Button>
+          {' '}
+          <Button
+            className="btn btn-dark"
+            variant="btn btn-primary"
+          >
+            Request
+          </Button>
+        </Card.Body>
 
-//                         </Card.Title>
+      </Card>
 
-//                         <Card.Text>
+    </div>
+  )
 
-//                             <p>Contact: {alumni.contact.email}</p>
-//                             <p>City: {alumni.address.city}</p>
-//                             <p>Birth: {alumni.birth}</p>
-//                             <p>Languages: {alumni.languages}</p>
-//                             <p>{alumni.isWorking ? "Is working" : "No is working now"}</p>
-
-//                         </Card.Text>
-
-//                         <Button
-//                             variant="btn btn-primary"
-//                             onClick={() =>
-//                                 navigate(-1)
-//                             }
-//                         >
-//                             Back
-//                         </Button>
-//                         <Button
-//                             variant="btn btn-primary"
-//                             onClick={() =>
-//                                 navigate()
-//                             }
-//                         >
-//                             Request
-//                         </Button>
-//                     </Card.Body>
-//                 </Card>
-//             </>
-//         </div>
-//     )
-
-// }
-// export default AlumniCard
+}
+export default AlumniCard

@@ -6,18 +6,6 @@ import Image from 'react-bootstrap/Image';
 
 const Navigation = () => {
 
-    // return (
-    //     <Navbar bg="light" data-bs-theme="light">
-    //         <Container>
-
-    //             <Nav className="me-auto">
-    //                 <NavLink to={"/"}>Home</NavLink >
-    //                 <NavLink to={"/projects"}>Projects</NavLink >
-    //                 <NavLink to={"/alumni"}>Alumni</NavLink>
-    //             </Nav>
-    //         </Container>
-    //     </Navbar>
-    // )
     return (
         <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
             <Container fluid>

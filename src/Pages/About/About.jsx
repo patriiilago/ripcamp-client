@@ -48,9 +48,18 @@ const About = () => {
                                 <Button className="ms-3">Patris's LinkedIn</Button>
                             </a>
                         </div>
+                        <Button
+                            className="btn btn-dark"
+                            size="sg"
+                            href="/"
+                        >
+                            Volver al inicio
+                        </Button>
+
                     </Col>
                 </Row>
             </Container>
+
         </div>
     )
 
