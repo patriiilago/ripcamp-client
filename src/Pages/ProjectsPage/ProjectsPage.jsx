@@ -1,7 +1,11 @@
+import { Container, Button } from "react-bootstrap";
+
+
+
 const Projects = () => {
 
     return (
-        <div className="container">
+        <Container>
             <h1 className="text-center mt-4">Projects</h1>
             <div className="row d-flex">
                 <div className="col-md-6 d-flex align-items-stretch">
@@ -111,9 +115,16 @@ const Projects = () => {
             </div>
 
             <div className="row mt-4">
-
+                <Button
+                    className="btn btn-dark"
+                    size="sg"
+                    href="/"
+                >
+                    Back to Home
+                </Button>
             </div>
-        </div>
+
+        </Container >
     );
 
 

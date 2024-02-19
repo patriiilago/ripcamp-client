@@ -9,13 +9,14 @@ const NotFoundPage = () => {
 
             <div className="NotFoundPage">
                 <img src={img} alt="404 Not Found" />
-                <Button
-                    className="btn btn-dark"
-                    size="sg"
-                    href="/"
-                >
-                    Volver al inicio
-                </Button>
+                <Link to={"/"}>
+                    <Button
+                        className="btn btn-dark"
+                        size="sg"
+                    >
+                        Back to Home
+                    </Button>
+                </Link>
             </div>
         </>
     )
