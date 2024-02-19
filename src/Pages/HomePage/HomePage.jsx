@@ -11,9 +11,10 @@ const HomePage = () => {
 
     return (
         <Container className='HomePage'>
-            <h1>RIPCAMP</h1>
-            <Row className="justify-content-md-center">
-                <Col>
+            <h1 style={{ marginBottom: '80px' }}>RipCamp®</h1>
+
+            <Row>
+                <Col sm={6}>
 
                     <Image
                         className="imageHomePage"
@@ -29,8 +30,9 @@ const HomePage = () => {
                     </Link>
                     {' '}
                 </Col>
-                <Col>
 
+
+                <Col sm={6}>
                     <Image
                         className="imageHomePage"
                         src="https://st2.depositphotos.com/3591429/5994/i/450/depositphotos_59944423-stock-illustration-group-of-multiethnic-colorful-people.jpg"
@@ -45,11 +47,15 @@ const HomePage = () => {
                     </Link>
                     {' '}
                 </Col>
+
             </Row>
-            <div style={{ marginBottom: '80px' }}></div>
+
         </Container>
     )
 
 }
+
+
+
 
 export default HomePage
