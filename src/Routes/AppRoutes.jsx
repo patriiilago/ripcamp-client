@@ -6,6 +6,7 @@ import AlumniCard from '../Pages/AlumniDetailsPage/AlumniDetailsPage'
 import AboutPage from './../Pages/AboutPage/AboutPage'
 import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage"
 import RequestForm from "../Components/RequestForm/RequestForm"
+import RequestList from './../Pages/RequestList/RequestList'
 
 
 const AppRoutes = () => {
@@ -23,6 +24,7 @@ const AppRoutes = () => {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/request-form" element={<RequestForm />} />
+                <Route path="/request-list" element={<RequestList />} />
 
             </Routes>
         </div >
