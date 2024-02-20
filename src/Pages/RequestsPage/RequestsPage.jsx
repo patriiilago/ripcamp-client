@@ -1,6 +1,8 @@
-import { Card, ListGroup } from "react-bootstrap"
+import { Card, ListGroup, Container, Col, Row, Button } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import './../../Pages/RequestsPage/RequestsPage.css'
+import { Link, useNavigate, useParams } from "react-router-dom"
 
 
 const API_URL = "http://localhost:5005"
@@ -8,6 +10,10 @@ const API_URL = "http://localhost:5005"
 const RequestsPage = () => {
 
     const [request, setRequest] = useState([])
+    const { requestId } = useParams()
+    const navigate = useNavigate()
+
+
     useEffect(() => loadRequest(), [])
 
     const loadRequest = () => {
@@ -19,33 +25,64 @@ const RequestsPage = () => {
 
 
 
+    const deleteRequest = () => {
+        axios
+            .delete(`${API_URL}/requests/${requestId}`)
+            .then(() => navigate(`/requests`))
+            .catch(err => console.log(err))
+    }
+
     //TODO: METER MAS DATOS EN LA CARD DE ALUMNI (BOOTCAMP, CAMPUS...)
+    //TODO: HAY QUE HACER EDIT PAGE PARA CREAR EL BOTON DE EDITAR Y QUE NOS LLEVE AHI
 
     return (
-        <div>
 
+        <Container>
             {
                 request.map((requests) => {
                     return (
 
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
-                                <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                            </Card.Body>
-                            <ListGroup className="list-group-flush">
-                                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                                <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-                            </ListGroup>
-                            <Card.Body>
-                                <Card.Link href="#">Card Link</Card.Link>
-                                <Card.Link href="#">Another Link</Card.Link>
-                            </Card.Body>
-                        </Card>
+                        <Row key={requests.id}>
+                            <Col>
+
+                                <div className="requestCard mb-2 mt-5" >
+
+                                    <Card style={{ width: '40rem' }}>
+
+                                        <ListGroup className="list-group-flush">
+                                            <ListGroup.Item><strong>Nombre: </strong> {requests.name}</ListGroup.Item>
+                                            <ListGroup.Item><strong>Email: </strong> {requests.email}</ListGroup.Item>
+                                            <ListGroup.Item><strong>Project: </strong> {requests.project}</ListGroup.Item>
+                                            <ListGroup.Item><strong>Type: </strong>{requests.type}</ListGroup.Item>
+                                            <ListGroup.Item><strong>Tag: </strong>{requests.tags}</ListGroup.Item>
+                                        </ListGroup>
+
+                                        <Card.Body>
+                                            <Card.Title className="textCard">{requests.title}</Card.Title>
+                                            <Card.Text>
+                                                {requests.description}
+                                            </Card.Text>
+
+                                            <ListGroup.Item>
+
+                                                <Link to={"#"}>
+                                                    <Button className="mb-2" variant="dark" >Edit</Button>
+                                                </Link>
+                                                {' '}
+                                                <Button onClick={deleteRequest} className="mb-2" variant="dark" >Delete</Button>
+
+
+                                            </ListGroup.Item>
+                                        </Card.Body>
+                                    </Card>
+
+
+
+
+                                </div>
+                            </Col>
+                        </Row>
+
 
 
 
@@ -53,9 +90,10 @@ const RequestsPage = () => {
                 })
             }
 
-
-
-        </div>
+            <Link to={"/"}>
+                <Button className="mb-5" variant="dark" >Back to Home</Button>
+            </Link>
+        </Container >
     )
 
 

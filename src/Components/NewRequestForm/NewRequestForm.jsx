@@ -27,7 +27,7 @@ const NewRequestForm = () => {
 
         axios
             .post(`${API_URL}/requests`, requestData)
-            .then(() => navigate('/requests-list'))
+            .then(() => navigate('/request-list'))
             .catch(err => console.log(err))
 
     }
