@@ -22,7 +22,8 @@ const AppRoutes = () => {
                 <Route path="/alumni" element={<AlumniPage />} />
                 <Route path="/alumni/:alumniId" element={<AlumniDetailsPage />} />
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/request-form" element={<NewRequestPage />} />
+                <Route path="/requests" element={<NewRequestPage />} />
+                <Route path="/requests/:requestId" element={<RequestsPage />} />
                 <Route path="/request-list" element={<RequestsPage />} />
 
                 <Route path="*" element={<NotFoundPage />} />
