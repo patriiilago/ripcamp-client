@@ -43,7 +43,7 @@ const AlumniDetailsPage = () => {
             <h1>Alumni details</h1>
 
 
-            <Card className="AlumniCard" border="secondary" style={{ width: '30rem' }}>
+            <Card className="AlumniCard" border="secondary" style={{ width: '30rem', margin: '0 0 80px 0' }}>
 
               <Card.Img
                 variant="top"
@@ -107,7 +107,6 @@ const AlumniDetailsPage = () => {
 
             </Card>
 
-            <div style={{ marginBottom: '80px' }}></div>
           </div>
       }
     </div >

@@ -7,7 +7,7 @@ const Projects = () => {
     return (
         <>
             <Container>
-                <h1 className="mb-5">Web Projects 💻</h1>
+                <h1 className="mb-5 mt-5">Web Projects 💻</h1>
                 <CardGroup>
                     <Row>
 
@@ -97,8 +97,8 @@ const Projects = () => {
 
             <Container>
 
-                <h1 className="mb-5">Data Projects 📈</h1>
-                <CardGroup>
+                <h1 className="mb-5 mt-5">Data Projects 📈</h1>
+                <CardGroup className="mb-5">
                     <Row>
                         <Col mb={4}>
                             <Card className="ProjectCard h-100">
@@ -176,7 +176,6 @@ const Projects = () => {
                                 </Card.Body>
 
                             </Card>
-                            <div style={{ marginBottom: '80px' }}></div>
                         </Col>
                     </Row>
 

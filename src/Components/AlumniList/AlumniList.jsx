@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import AlumniCard from "../AlumniCard/AlumniCard"
+import AlumniCard from './../AlumniCard/AlumniCard'
 
 const API_URL = "http://localhost:5005/alumni"
 

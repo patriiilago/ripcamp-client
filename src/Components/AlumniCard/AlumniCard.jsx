@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { Button, Card } from "react-bootstrap"
-import './AlumniCard/AlumniCard.css'
+import './../../Components/AlumniCard/AlumniCard.css'
+
 
 const AlumniCard = ({ id, img, fullName, contact, isWorking }) => {
 
