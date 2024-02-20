@@ -24,7 +24,7 @@ const AboutPage = () => {
                     src="https://ca.slack-edge.com/T06BMN0R8BG-U06CH4KHM7F-502fcb046a1f-512"
                     rounded />
                 <Link to={"https://www.linkedin.com/in/teresa-arranz-carrasco-4336ba166/"}>
-                    <Button variant="dark" >Teresa's LinkedIn </Button>
+                    <Button variant="dark" >Teresa's LinkedIn 👩🏼‍💻 </Button>
                 </Link>
             </div>
 
@@ -35,14 +35,14 @@ const AboutPage = () => {
                     rounded />
 
                 <Link to={"https://www.linkedin.com/in/patri-lago-b793242b1/"}>
-                    <Button variant="dark" >Patri's LinkedIn </Button>
+                    <Button variant="dark" >Patri's LinkedIn 👩🏾‍💻 </Button>
                 </Link>
             </div>
 
 
 
             <Link to={"/"}>
-                <Button variant="dark" >Back to Home</Button>
+                <Button variant="dark" > 🔙 Back to Home</Button>
             </Link>
 
         </Container>

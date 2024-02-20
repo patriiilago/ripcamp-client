@@ -14,8 +14,8 @@ const AlumniCard = ({ id, img, fullName, contact, isWorking }) => {
                 <div >
                     <div className="alumniContent">
                         <img className="alumniImg" src={img} alt={id} />
-                        <div className="alumniInfo">
-                            <Link to={`/alumni/${id}`}>
+                        <div >
+                            <Link className="alumniInfo" to={`/alumni/${id}`}>
                                 <h5>{firstName} {lastName}</h5>
                             </Link>
                             <span><strong> Email:</strong> {email}</span>
@@ -24,7 +24,7 @@ const AlumniCard = ({ id, img, fullName, contact, isWorking }) => {
                         </div>
                         <div className="buttonContainer">
                             <Link to={`/alumni/${id}`}>
-                                <Button variant="outline-success"><strong>Request me!</strong> </Button>
+                                <Button variant="dark"><strong>❔Request me!</strong> </Button>
                             </Link>
                         </div>
                     </div>

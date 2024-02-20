@@ -16,15 +16,15 @@ const Navigation = () => {
                             src="https://static.vecteezy.com/system/resources/previews/010/595/118/non_2x/headstone-icon-gothic-gravestone-with-skull-flowers-rip-text-creepy-cemetery-grave-black-outline-simple-sketch-isolated-on-white-clipart-for-halloween-decor-logo-apps-print-vector.jpg"
                             width="50"
                             height="50"
-                            className="d-inline-block align-top"
+                            className="navbarImg"
                             alt="RipCamp logo"
                         />
                     </NavLink>
                 </Navbar.Brand >
                 <Nav className="justify-content-end">
-                    <Link className='nav-link' to={"/"}>Home</Link>
-                    <Link className='nav-link' to={"/projects"}>Projects</Link>
-                    <Link className='nav-link' to={"/alumni"}>Alumni</Link>
+                    <Link className='nav-link' to={"/"}>🏠 Home</Link>
+                    <Link className='nav-link' to={"/projects"}> 💻 Projects</Link>
+                    <Link className='nav-link' to={"/alumni"}> 👩🏼‍🏫 Alumni</Link>
                 </Nav>
             </Container >
         </Navbar >

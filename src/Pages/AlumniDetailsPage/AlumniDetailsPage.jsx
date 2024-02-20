@@ -26,7 +26,7 @@ const AlumniDetailsPage = () => {
       .catch(err => console.log(err))
   }
 
-  const { img, fullName, contact, address, birth, languages, isWorking } = alumni
+  const { img, fullName, contact, address, birth, languages, isWorking, bootcamp, campus } = alumni
 
   return (
     <div
@@ -86,12 +86,21 @@ const AlumniDetailsPage = () => {
                 </Card.Text>
 
                 <Card.Text>
+                  <strong> Bootcamp: </strong> {bootcamp}
+                </Card.Text>
+
+
+                <Card.Text>
+                  <strong> Campus: </strong> {campus}
+                </Card.Text>
+
+                <Card.Text>
                   <strong> Is working?: </strong> {isWorking ? "Is working now" : "Is not working now"}
                 </Card.Text>
 
 
                 <Link to={"/request-form"}>
-                  <Button variant="dark" >Request to {fullName.firstName}</Button>
+                  <Button variant="dark" > ❔ Request to {fullName.firstName}</Button>
                 </Link>
 
 
@@ -99,7 +108,7 @@ const AlumniDetailsPage = () => {
 
 
                 <Link to={"/alumni"}>
-                  <Button variant="dark" >Back</Button>
+                  <Button variant="dark" > 🔙 Back</Button>
                 </Link>
 
 
