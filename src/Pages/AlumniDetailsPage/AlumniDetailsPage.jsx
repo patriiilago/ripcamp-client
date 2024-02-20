@@ -14,7 +14,6 @@ const AlumniDetailsPage = () => {
 
   const { alumniId } = useParams()
 
-
   useEffect(() => loadAlumni(), [alumniId])
 
   const loadAlumni = () => {
@@ -25,11 +24,7 @@ const AlumniDetailsPage = () => {
         setIsLoading(false)
       })
       .catch(err => console.log(err))
-
   }
-
-
-
 
   const { img, fullName, contact, address, birth, languages, isWorking } = alumni
 
@@ -43,14 +38,12 @@ const AlumniDetailsPage = () => {
           ?
           <h1>Loading....</h1>
           :
-
-
-          <div >
+          <div>
 
             <h1>Alumni details</h1>
 
 
-            <Card className="bodyCard" border="secondary" style={{ width: '30rem' }}>
+            <Card className="AlumniCard" border="secondary" style={{ width: '30rem' }}>
 
               <Card.Img
                 variant="top"
@@ -87,9 +80,9 @@ const AlumniDetailsPage = () => {
 
                 <Card.Text>
                   <strong>Languages: </strong>
-                  {languages.map((language, index) => (
-                    <span key={index}>{language}{" "}</span>
-                  ))}
+                  {
+                    languages.map((language, index) => <span key={index}>{language}{" "}</span>)
+                  }
                 </Card.Text>
 
                 <Card.Text>

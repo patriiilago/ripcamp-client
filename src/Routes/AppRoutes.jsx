@@ -2,11 +2,11 @@ import { Routes, Route } from "react-router-dom"
 import HomePage from './../Pages/HomePage/HomePage'
 import ProjectsPage from './../Pages/ProjectsPage/ProjectsPage'
 import AlumniPage from '../Pages/AlumniPage/AlumniPage'
-import AlumniCard from '../Pages/AlumniDetailsPage/AlumniDetailsPage'
+import AlumniDetailsPage from '../Pages/AlumniDetailsPage/AlumniDetailsPage'
 import AboutPage from './../Pages/AboutPage/AboutPage'
 import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage"
-import RequestForm from "../Components/RequestForm/RequestForm"
-import RequestList from './../Pages/RequestList/RequestList'
+import NewRequestPage from "../Pages/NewRequestPage/NewRequestPage"
+import RequestsPage from './../Pages/RequestsPage/RequestsPage'
 
 
 const AppRoutes = () => {
@@ -20,11 +20,12 @@ const AppRoutes = () => {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/alumni" element={<AlumniPage />} />
-                <Route path="/alumni/:alumniId" element={<AlumniCard />} />
+                <Route path="/alumni/:alumniId" element={<AlumniDetailsPage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/request-form" element={<NewRequestPage />} />
+                <Route path="/request-list" element={<RequestsPage />} />
+
                 <Route path="*" element={<NotFoundPage />} />
-                <Route path="/request-form" element={<RequestForm />} />
-                <Route path="/request-list" element={<RequestList />} />
 
             </Routes>
         </div >

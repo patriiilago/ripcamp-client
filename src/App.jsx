@@ -7,6 +7,7 @@ import AppRoutes from "./Routes/AppRoutes"
 
 function App() {
 
+  // TODO: HACER USO DE LAS CLASES DE ESPACIADO 
 
   return (
 

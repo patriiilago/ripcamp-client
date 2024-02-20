@@ -10,15 +10,11 @@ const AlumniPage = () => {
 
             <Container className="d-flex justify-content-center">
 
-                <div className="AlumniListContainer">
+                <div className="AlumniListContainer mb-5">
 
                     <h1>Alumni List</h1>
 
                     <AlumniList />
-
-
-
-                    <div style={{ marginBottom: '80px' }}></div>
 
                 </div>
 
