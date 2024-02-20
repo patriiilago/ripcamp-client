@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap"
 import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
+import './AlumniDetailsPage.css'
 
 const API_URL = "http://localhost:5005/alumni"
 
@@ -44,11 +45,12 @@ const AlumniDetailsPage = () => {
           :
 
 
-          <div className="AlumniCard">
+          <div >
 
             <h1>Alumni details</h1>
 
-            <Card border="secondary" style={{ width: '30rem' }} className="mb-5">
+
+            <Card className="bodyCard" border="secondary" style={{ width: '30rem' }}>
 
               <Card.Img
                 variant="top"
@@ -56,7 +58,7 @@ const AlumniDetailsPage = () => {
                 alt={fullName.firstName}
               />
 
-              <Card.Body>
+              <Card.Body >
 
                 <Card.Title>
                   <h3>
@@ -112,6 +114,7 @@ const AlumniDetailsPage = () => {
 
             </Card>
 
+            <div style={{ marginBottom: '80px' }}></div>
           </div>
       }
     </div >

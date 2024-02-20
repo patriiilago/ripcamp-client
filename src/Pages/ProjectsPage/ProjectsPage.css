@@ -3,3 +3,18 @@
     height: 160px;
     object-fit: cover;
 }
+
+.textClass {
+    height: 400px;
+    margin-bottom: 50px;
+
+}
+
+h1 {
+    margin: 50px o;
+}
+
+.cardClass {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+}

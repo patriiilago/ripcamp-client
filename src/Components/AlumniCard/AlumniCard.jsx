@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { Button, Card } from "react-bootstrap"
+import './AlumniCard/AlumniCard.css'
 
 const AlumniCard = ({ id, img, fullName, contact, isWorking }) => {
 
@@ -8,8 +9,8 @@ const AlumniCard = ({ id, img, fullName, contact, isWorking }) => {
 
     return (
         <Card border="secondary" style={{ width: '55rem', marginBottom: '20px' }}>
-            <Card.Body>
-                <div className="alumniBody">
+            <Card.Body className="alumniBody">
+                <div >
                     <div className="alumniContent">
                         <img className="alumniImg" src={img} alt={id} />
                         <div className="alumniInfo">

@@ -13,14 +13,14 @@ const Projects = () => {
                     <p></p>
                     <CardGroup>
                         <Col mb={4}>
-                            <Card>
+                            <Card className="cardClass">
                                 <Card.Img className="ImgCard"
                                     variant="top"
                                     src="https://images.crazygames.com/games/space-invaders/cover-1591955301711.png?auto=format,compress&q=75&cs=strip"
                                     alt="Web Project 1" />
                                 <Card.Body>
                                     <Card.Title>Porject #1: The Game</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="textClass">
                                         Technical Requirements
                                         Your game must meet the following technical requirements:
                                         Render a game in the browser.
@@ -41,14 +41,14 @@ const Projects = () => {
                         </Col>
 
                         <Col mb={4}>
-                            <Card>
+                            <Card className="cardClass">
                                 <Card.Img className="ImgCard"
                                     variant="top"
                                     src="https://www.alphalogicinc.com/wp-content/uploads/2019/02/React-app.jpg"
                                     alt="Web Project 2" />
                                 <Card.Body>
                                     <Card.Title>Project #2: React Application</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="textClass">
                                         Technical requirements:
                                         Create a Single Page Application (SPA), using React, consisting of multiple views.
                                         The React application should be integrated with either a mock backend or an external API and should perform all CRUD
@@ -67,14 +67,14 @@ const Projects = () => {
 
 
                         <Col mb={4}>
-                            <Card>
+                            <Card className="cardClass">
                                 <Card.Img className="ImgCard"
                                     variant="top"
                                     src="https://www.monday.com/blog/wp-content/uploads/2021/06/cg45imeetz97Bi1aO7F7Hczm_okRzkD90cI_n85UntHmyphNEJH2J1DmAO1KPt0jjIPLAmCsKannpMIDta9armoNXipQOrsCRxDQPwBR7rjcawY6BD4-HxQDqxsgSQAFoA2LQfvT.png"
                                     alt="Web Project 3" />
                                 <Card.Body>
                                     <Card.Title>Project #3: MIEDITO</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="textClass">
                                         Technical Requirements:
                                         Your project must meet the following technical requirements: Create a Single Page Application (SPA),
                                         using React, consisting of multiple views.
@@ -103,14 +103,14 @@ const Projects = () => {
                     <p></p>
                     <CardGroup>
                         <Col mb={4}>
-                            <Card>
+                            <Card className="cardClass">
                                 <Card.Img className="ImgCard"
                                     variant="top"
                                     src="https://sceglifornitore.it/blog/wp-content/uploads/2021/02/data-analyst.png"
                                     alt="Data Project 1" />
                                 <Card.Body>
                                     <Card.Title>Porject #1: The Game</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="textClass">
                                         Technical Requirements
                                         Your game must meet the following technical requirements:
                                         Render a game in the browser.
@@ -130,14 +130,14 @@ const Projects = () => {
                         </Col>
 
                         <Col mb={4}>
-                            <Card>
+                            <Card className="cardClass">
                                 <Card.Img className="ImgCard"
                                     variant="top"
                                     src="https://images.shiksha.com/mediadata/shikshaOnline/mailers/2021/naukri-learning/oct/27oct/what-is-data-analyst.jpg"
                                     alt="Data Project 2" />
                                 <Card.Body>
                                     <Card.Title>Project #2: React Application</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="textClass">
                                         Technical requirements:
                                         Create a Single Page Application (SPA), using React, consisting of multiple views.
                                         The React application should be integrated with either a mock backend or an external API and should perform all CRUD
@@ -155,14 +155,14 @@ const Projects = () => {
                         </Col>
 
                         <Col mb={4}>
-                            <Card>
+                            <Card className="cardClass">
                                 <Card.Img className="ImgCard"
                                     variant="top"
                                     src="https://sceglifornitore.it/blog/wp-content/uploads/2021/02/data-analyst.png"
                                     alt="Data Project 3" />
                                 <Card.Body>
                                     <Card.Title>Project #3: MIEDITO</Card.Title>
-                                    <Card.Text>
+                                    <Card.Text className="textClass">
                                         Technical Requirements:
                                         Your project must meet the following technical requirements: Create a Single Page Application (SPA),
                                         using React, consisting of multiple views.
@@ -178,6 +178,7 @@ const Projects = () => {
                                 </Card.Body>
 
                             </Card>
+                            <div style={{ marginBottom: '80px' }}></div>
                         </Col>
 
                     </CardGroup>
