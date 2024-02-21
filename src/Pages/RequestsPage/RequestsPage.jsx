@@ -19,7 +19,7 @@ const RequestsPage = () => {
     const loadRequests = () => {
         axios
             .get(`${API_URL}/requests/`)
-            .then(({ data }) => setRequests(data))
+            .then(({ }) => setRequests(data))
             .catch(err => console.log(err))
     }
 
@@ -27,11 +27,8 @@ const RequestsPage = () => {
 
     const deleteRequest = (requestIdToDelete) => {
         axios
-            .delete(`${API_URL}/requests/${requestIdToDelete}`)
-            .then(() => {
-                setRequests(requests.filter(request => requests.id !== requestIdToDelete))
-            })
-
+            .delete(`${API_URL}/requests/${requestId}`)
+            .then(() => navigate({}))
             .catch(err => console.log(err))
     }
 
