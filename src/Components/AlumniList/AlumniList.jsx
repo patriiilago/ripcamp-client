@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import AlumniCard from './../AlumniCard/AlumniCard'
+import { Container } from "react-bootstrap"
 
 const API_URL = "http://localhost:5005/alumni"
 
@@ -22,7 +23,7 @@ const AlumniList = () => {
     return (
         alumnis.map((alumni, index) => {
             return (
-                <AlumniCard key={index} {...alumni} />
+                <AlumniCard  {...alumni} key={index} />
             )
         })
     )

@@ -2,13 +2,10 @@ import Container from 'react-bootstrap/Container'
 import { Nav, Navbar, Row, Col } from 'react-bootstrap'
 import { NavLink, Link } from "react-router-dom"
 
-
-
 const Navigation = () => {
 
-
     return (
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
             <Container>
                 <Navbar.Brand >
                     <NavLink to={"/"}>
@@ -21,11 +18,14 @@ const Navigation = () => {
                         />
                     </NavLink>
                 </Navbar.Brand >
-                <Nav className="justify-content-end">
-                    <Link className='nav-link' to={"/"}>🏠 Home</Link>
-                    <Link className='nav-link' to={"/projects"}> 💻 Projects</Link>
-                    <Link className='nav-link' to={"/alumni"}> 👩🏼‍🏫 Alumni</Link>
-                </Nav>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="justify-content-end">
+                        <Link className='nav-link' to={"/"}>🏠 Home</Link>
+                        <Link className='nav-link' to={"/projects"}> 💻 Projects</Link>
+                        <Link className='nav-link' to={"/alumni"}> 👩🏼‍🏫 Alumni</Link>
+                    </Nav>
+                </Navbar.Collapse>
             </Container >
         </Navbar >
     )

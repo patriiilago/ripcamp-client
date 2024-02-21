@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Button, Card } from "react-bootstrap"
+import { Button, Card, Container } from "react-bootstrap"
 import './../../Components/AlumniCard/AlumniCard.css'
 
 
@@ -9,7 +9,7 @@ const AlumniCard = ({ id, img, fullName, contact, isWorking }) => {
     const { email, phone } = contact
 
     return (
-        <Card border="secondary" style={{ width: '55rem', marginBottom: '20px' }}>
+        <Card border="secondary" style={{ marginBottom: '20px' }}>
             <Card.Body className="alumniBody">
                 <div >
                     <div className="alumniContent">

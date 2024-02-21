@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Button } from "react-bootstrap"
+import { Card, Button, Col } from "react-bootstrap"
 import { useParams, Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios"
@@ -31,7 +31,7 @@ const AlumniDetailsPage = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center"
-      style={{ minHeight: "70vh" }}>
+    >
 
       {
         isLoading
@@ -42,80 +42,81 @@ const AlumniDetailsPage = () => {
 
             <h1>Alumni details</h1>
 
+            <Col className=" mb-5" sm={{ span: 8, offset: 2 }}>
 
-            <Card className="AlumniCard" border="secondary" style={{ width: '30rem', margin: '0 0 80px 0' }}>
+              <Card className="AlumniCard" border="secondary" >
 
-              <Card.Img
-                variant="top"
-                src={img}
-                alt={fullName.firstName}
-              />
+                <Card.Img
+                  variant="top"
+                  src={img}
+                  alt={fullName.firstName}
+                />
 
-              <Card.Body >
+                <Card.Body >
 
-                <Card.Title>
-                  <h3>
-                    {fullName.firstName} {' '} {fullName.lastName}
-                  </h3>
+                  <Card.Title>
+                    <h3>
+                      {fullName.firstName} {' '} {fullName.lastName}
+                    </h3>
 
-                </Card.Title>
+                  </Card.Title>
 
-                <Card.Text>
-                  <strong>Phone: </strong> {contact.phone}
-                </Card.Text>
+                  <Card.Text>
+                    <strong>Phone: </strong> {contact.phone}
+                  </Card.Text>
 
-                <Card.Text>
-                  <strong> Contact: </strong> {contact.email}
-                </Card.Text>
+                  <Card.Text>
+                    <strong> Contact: </strong> {contact.email}
+                  </Card.Text>
 
-                <Card.Text>
-                  <strong> City: </strong> {address.city}
-                </Card.Text>
+                  <Card.Text>
+                    <strong> City: </strong> {address.city}
+                  </Card.Text>
 
-                <Card.Text>
-                  <strong> Birth:</strong> {birth}
-                </Card.Text>
-
-
-
-                <Card.Text>
-                  <strong>Languages: </strong>
-                  {
-                    languages.map((language, index) => <span key={index}>{language}{" "}</span>)
-                  }
-                </Card.Text>
-
-                <Card.Text>
-                  <strong> Bootcamp: </strong> {bootcamp}
-                </Card.Text>
+                  <Card.Text>
+                    <strong> Birth:</strong> {birth}
+                  </Card.Text>
 
 
-                <Card.Text>
-                  <strong> Campus: </strong> {campus}
-                </Card.Text>
 
-                <Card.Text>
-                  <strong> Is working?: </strong> {isWorking ? "Is working now" : "Is not working now"}
-                </Card.Text>
+                  <Card.Text>
+                    <strong>Languages: </strong>
+                    {
+                      languages.map((language, index) => <span key={index}>{language}{" "}</span>)
+                    }
+                  </Card.Text>
 
-
-                <Link to={"/request-form"}>
-                  <Button variant="dark" > ❔ Request to {fullName.firstName}</Button>
-                </Link>
-
-
-                {' '}
+                  <Card.Text>
+                    <strong> Bootcamp: </strong> {bootcamp}
+                  </Card.Text>
 
 
-                <Link to={"/alumni"}>
-                  <Button variant="dark" > 🔙 Back</Button>
-                </Link>
+                  <Card.Text>
+                    <strong> Campus: </strong> {campus}
+                  </Card.Text>
+
+                  <Card.Text>
+                    <strong> Is working?: </strong> {isWorking ? "Is working now" : "Is not working now"}
+                  </Card.Text>
 
 
-              </Card.Body>
+                  <Link to={"/request-form"}>
+                    <Button variant="dark" > ❔ Request to {fullName.firstName}</Button>
+                  </Link>
 
-            </Card>
 
+                  {' '}
+
+
+                  <Link to={"/alumni"}>
+                    <Button variant="dark" > 🔙 Back</Button>
+                  </Link>
+
+
+                </Card.Body>
+
+              </Card>
+            </Col>
           </div>
       }
     </div >
