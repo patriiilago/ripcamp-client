@@ -25,10 +25,10 @@ const RequestsPage = () => {
 
 
 
-    const deleteRequest = () => {
+    const deleteRequest = requestId => {
         axios
             .delete(`${API_URL}/requests/${requestId}`)
-            .then(() => navigate({}))
+            .then(() => loadRequests())
             .catch(err => console.log(err))
     }
 
@@ -64,26 +64,18 @@ const RequestsPage = () => {
 
                                             <ListGroup.Item>
 
-                                                <Link to={"#"}>
+                                                <Link to={`/request/edit/${request.id}`}>
                                                     <Button className="mb-2" variant="dark" >Edit</Button>
                                                 </Link>
                                                 {' '}
                                                 <Button onClick={() => deleteRequest(request.id)} className="mb-2" variant="dark" >Delete</Button>
 
-
                                             </ListGroup.Item>
                                         </Card.Body>
                                     </Card>
-
-
-
-
                                 </div>
                             </Col>
                         </Row>
-
-
-
 
                     )
                 })
