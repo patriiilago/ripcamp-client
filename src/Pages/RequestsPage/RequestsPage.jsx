@@ -1,8 +1,9 @@
-import { Card, ListGroup, Container, Col, Row, Button, Accordion, FloatingLabel, Form } from "react-bootstrap"
+import { Card, ListGroup, Container, Col, Row, Button } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import './../../Pages/RequestsPage/RequestsPage.css'
 import { Link, useNavigate, useParams } from "react-router-dom"
+import ResponseRequest from "../../Components/ResponseRequest/ResponseRequest"
 
 
 const API_URL = "http://localhost:5005"
@@ -30,11 +31,6 @@ const RequestsPage = () => {
             .delete(`${API_URL}/requests/${requestId}`)
             .then(() => loadRequests())
             .catch(err => console.log(err))
-    }
-
-    const handleCommentSubmit = (e) => {
-        e.preventDefault()
-        alert('aaaaqui!')
     }
 
 
@@ -78,33 +74,12 @@ const RequestsPage = () => {
                                                 <Button onClick={() => deleteRequest(request.id)} className="mb-2" variant="dark" >Delete</Button>
                                                 {' '}
 
-                                                {
-                                                    !request.response &&
 
-                                                    <Accordion defaultActiveKey="0">
-                                                        <Accordion.Item eventKey="0">
-                                                            <Accordion.Header><strong>Response:</strong> </Accordion.Header>
-                                                            <Accordion.Body>
-
-                                                                <Form onSubmit={handleCommentSubmit}>
-                                                                    <FloatingLabel controlId="floatingTextarea2" label="Description" className="mt-2 mb-2" >
-                                                                        <Form.Control
-                                                                            type="text"
-                                                                            as="textarea"
-                                                                        />
-                                                                        <Button className="mb-2" variant="dark" type="submit" >Send respnse</Button>
-                                                                    </FloatingLabel>
-                                                                </Form>
-
-                                                            </Accordion.Body>
-                                                        </Accordion.Item>
-                                                    </Accordion>
-                                                }
                                             </ListGroup.Item>
 
 
 
-
+                                            <ResponseRequest />
 
 
 

@@ -1,4 +1,5 @@
 import { Container } from "react-bootstrap"
+import EditRequestForm from "../../Components/EditRequestForm/EditRequestForm"
 
 
 const EditFormPage = () => {
@@ -10,7 +11,7 @@ const EditFormPage = () => {
 
             <Container>
 
-                <EditForm />
+                <EditRequestForm />
 
             </Container>
         </div>
