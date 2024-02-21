@@ -39,7 +39,7 @@ const RequestsPage = () => {
 
     return (
 
-        <Container>
+        <Container className="col-md-8">
             {
                 requests.map((request) => {
                     return (

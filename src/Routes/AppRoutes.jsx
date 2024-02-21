@@ -7,6 +7,7 @@ import AboutPage from './../Pages/AboutPage/AboutPage'
 import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage"
 import NewRequestPage from "../Pages/NewRequestPage/NewRequestPage"
 import RequestsPage from './../Pages/RequestsPage/RequestsPage'
+import NewRequestForm from "../Components/NewRequestForm/NewRequestForm"
 
 
 const AppRoutes = () => {
@@ -25,6 +26,8 @@ const AppRoutes = () => {
                 <Route path="/requests" element={<NewRequestPage />} />
                 <Route path="/requests/:requestId" element={<RequestsPage />} />
                 <Route path="/request-list" element={<RequestsPage />} />
+                <Route path="/request-form" element={<NewRequestForm />} />
+
 
                 <Route path="*" element={<NotFoundPage />} />
 
