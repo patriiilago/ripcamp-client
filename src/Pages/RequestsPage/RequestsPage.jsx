@@ -1,4 +1,4 @@
-import { Card, ListGroup, Container, Col, Row, Button } from "react-bootstrap"
+import { Card, ListGroup, Container, Col, Row, Button, Accordion, FloatingLabel, Form } from "react-bootstrap"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import './../../Pages/RequestsPage/RequestsPage.css'
@@ -32,7 +32,13 @@ const RequestsPage = () => {
             .catch(err => console.log(err))
     }
 
-    //TODO: HAY QUE HACER EDIT PAGE PARA CREAR EL BOTON DE EDITAR Y QUE NOS LLEVE AHI
+    const handleCommentSubmit = (e) => {
+        e.preventDefault()
+        alert('aaaaqui!')
+    }
+
+
+
 
     return (
 
@@ -49,6 +55,7 @@ const RequestsPage = () => {
                                     <Card style={{ width: '40rem' }}>
 
                                         <ListGroup className="list-group-flush">
+                                            <ListGroup.Item><strong>Responsed:  </strong> {request.response ? "✅" : "❌"}</ListGroup.Item>
                                             <ListGroup.Item><strong>Nombre: </strong> {request.name}</ListGroup.Item>
                                             <ListGroup.Item><strong>Email: </strong> {request.email}</ListGroup.Item>
                                             <ListGroup.Item><strong>Project: </strong> {request.project}</ListGroup.Item>
@@ -69,9 +76,44 @@ const RequestsPage = () => {
                                                 </Link>
                                                 {' '}
                                                 <Button onClick={() => deleteRequest(request.id)} className="mb-2" variant="dark" >Delete</Button>
+                                                {' '}
 
+                                                {
+                                                    !request.response &&
+
+                                                    <Accordion defaultActiveKey="0">
+                                                        <Accordion.Item eventKey="0">
+                                                            <Accordion.Header><strong>Response:</strong> </Accordion.Header>
+                                                            <Accordion.Body>
+
+                                                                <Form onSubmit={handleCommentSubmit}>
+                                                                    <FloatingLabel controlId="floatingTextarea2" label="Description" className="mt-2 mb-2" >
+                                                                        <Form.Control
+                                                                            type="text"
+                                                                            as="textarea"
+                                                                        />
+                                                                        <Button className="mb-2" variant="dark" type="submit" >Send respnse</Button>
+                                                                    </FloatingLabel>
+                                                                </Form>
+
+                                                            </Accordion.Body>
+                                                        </Accordion.Item>
+                                                    </Accordion>
+                                                }
                                             </ListGroup.Item>
+
+
+
+
+
+
+
+
                                         </Card.Body>
+
+
+
+
                                     </Card>
                                 </div>
                             </Col>
