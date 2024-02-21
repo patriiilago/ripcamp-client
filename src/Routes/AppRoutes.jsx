@@ -9,7 +9,7 @@ import NewRequestPage from "../Pages/NewRequestPage/NewRequestPage"
 import RequestsPage from './../Pages/RequestsPage/RequestsPage'
 import NewRequestForm from "../Components/NewRequestForm/NewRequestForm"
 import EditFormPage from "../Pages/EditFormPage/EditFormPage"
-import EditForm from "../Components/EditForm/EditForm"
+import EditRequestForm from "../Components/EditRequestForm/EditRequestForm"
 
 const AppRoutes = () => {
 
@@ -26,7 +26,7 @@ const AppRoutes = () => {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/requests" element={<NewRequestPage />} />
                 <Route path="/requests/:requestId" element={<RequestsPage />} />
-                <Route path="/request/edit/:requestId" element={<EditForm />} />
+                <Route path="/request/edit/:requestId" element={<EditRequestForm />} />
                 <Route path="/request-list" element={<RequestsPage />} />
                 <Route path="/request-form" element={<NewRequestForm />} />
 

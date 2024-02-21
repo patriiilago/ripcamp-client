@@ -5,7 +5,7 @@ import { Container, Form, FloatingLabel, Button } from "react-bootstrap"
 
 const API_URL = "http://localhost:5005"
 
-const EditForm = () => {
+const EditRequestForm = () => {
 
     const [requestData, setRequestsData] = useState({
         email: "",
@@ -17,6 +17,8 @@ const EditForm = () => {
 
     })
 
+
+    //TODO : PASAR AL FORM TODOS LOS REGISTROS DE LA API
 
     const { requestId } = useParams()
 
@@ -173,4 +175,4 @@ const EditForm = () => {
 
 }
 
-export default EditForm
+export default EditRequestForm
