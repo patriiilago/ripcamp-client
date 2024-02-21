@@ -8,8 +8,8 @@ import NotFoundPage from "../Pages/NotFoundPage/NotFoundPage"
 import NewRequestPage from "../Pages/NewRequestPage/NewRequestPage"
 import RequestsPage from './../Pages/RequestsPage/RequestsPage'
 import NewRequestForm from "../Components/NewRequestForm/NewRequestForm"
-import EditFormPage from "../Pages/EditFormPage/EditFormPage"
 import EditRequestForm from "../Components/EditRequestForm/EditRequestForm"
+import ResponseRequest from "../Components/ResponseRequest/ResponseRequest"
 
 const AppRoutes = () => {
 
@@ -29,7 +29,7 @@ const AppRoutes = () => {
                 <Route path="/request/edit/:requestId" element={<EditRequestForm />} />
                 <Route path="/request-list" element={<RequestsPage />} />
                 <Route path="/request-form" element={<NewRequestForm />} />
-
+                <Route path="/request-list/:requestId" element={<ResponseRequest />} />
 
                 <Route path="*" element={<NotFoundPage />} />
 
