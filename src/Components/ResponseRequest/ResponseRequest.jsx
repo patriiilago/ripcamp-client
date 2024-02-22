@@ -25,22 +25,31 @@ const ResponseRequest = () => {
     const navigate = useNavigate()
     const { requestId } = useParams()
 
+
+
+
     useEffect(() => {
         const loadRequests = () => {
             if (requestId) {
                 axios
                     .put(`${API_URL}/request-list/${requestId}`, requestData)
-                    .then(() => navigate(`/request-list/`))
+                    .then(() => navigate(`/request-list/${requestId}`))
                     .catch(err => console.log(err))
             }
         }
         loadRequests()
     }, [requestId])
 
+
+
+
     const handleInputChange = e => {
         const { value, name } = e.target;
         setRequestsData({ ...requestData, [name]: value })
-    };
+    }
+
+
+
 
     const handleCommentSubmit = (e) => {
         e.preventDefault()
@@ -48,10 +57,7 @@ const ResponseRequest = () => {
             axios
                 .put(`${API_URL}/request-list/${requestId}`, requestData)
                 .then(() => {
-                    setRequestsData({
-                        ...requestData,
-                        textresponse: ''
-                    });
+                    setRequestsData({ ...requestData, textresponse: '' })
                     navigate(`/request-list/`)
                 })
                 .catch(err => console.log(err))
@@ -79,7 +85,7 @@ const ResponseRequest = () => {
                                         value={requestData.textresponse}
                                         onChange={handleInputChange}
                                     />
-                                    <Button className="mb-2" variant="dark" type="submit" >Send response</Button>
+                                    <Button className="mt-2 mb-2" variant="dark" type="submit">Send response</Button>
                                 </FloatingLabel>
                             </Form>
 
