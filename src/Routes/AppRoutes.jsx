@@ -9,7 +9,6 @@ import NewRequestPage from "../Pages/NewRequestPage/NewRequestPage"
 import RequestsPage from './../Pages/RequestsPage/RequestsPage'
 import NewRequestForm from "../Components/NewRequestForm/NewRequestForm"
 import EditRequestForm from "../Components/EditRequestForm/EditRequestForm"
-import ResponseRequest from "../Components/ResponseRequest/ResponseRequest"
 
 const AppRoutes = () => {
 
@@ -24,12 +23,12 @@ const AppRoutes = () => {
                 <Route path="/alumni" element={<AlumniPage />} />
                 <Route path="/alumni/:alumniId" element={<AlumniDetailsPage />} />
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/requests" element={<NewRequestPage />} />
-                <Route path="/requests/:requestId" element={<RequestsPage />} />
-                <Route path="/request/edit/:requestId" element={<EditRequestForm />} />
-                <Route path="/request-list" element={<RequestsPage />} />
+
                 <Route path="/request-form" element={<NewRequestForm />} />
-                <Route path="/requests/:requestId" element={<ResponseRequest />} />
+                <Route path="/request-list" element={<RequestsPage />} />
+                <Route path="/requests" element={<NewRequestPage />} />
+                <Route path="/request/edit/:requestId" element={<EditRequestForm />} />
+                <Route path="/requests/:requestId" element={<RequestsPage />} />
 
                 <Route path="*" element={<NotFoundPage />} />
 

@@ -1,7 +1,7 @@
 import { Container, Accordion, Button, Form, FloatingLabel } from "react-bootstrap"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import axios from "axios"
-import { useParams, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 const API_URL = "http://localhost:5005"
@@ -12,7 +12,6 @@ const ResponseRequest = ({ request }) => {
     const [requestData, setRequestsData] = useState({ ...request })
 
     const navigate = useNavigate()
-    const { requestId } = useParams()
 
 
     const handleInputChange = e => {
@@ -21,15 +20,17 @@ const ResponseRequest = ({ request }) => {
     }
 
 
-    const handleCommentSubmit = (event) => {
-        event.preventDefault()
+    const handleCommentSubmit = (e) => {
+        e.preventDefault()
 
         if (!requestData?.textresponse) {
             axios
-                .put(`${API_URL}/requests/${requestId}`, requestData)
+                .put(`${API_URL}/requests/${request.id}`, requestData)
+
                 .then(() => navigate(`/request-list/`))
                 .catch(err => console.log(err))
         }
+        console.log(request.id)
     }
 
     return (
