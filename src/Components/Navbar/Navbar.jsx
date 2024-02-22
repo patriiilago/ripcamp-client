@@ -1,5 +1,5 @@
 import Container from 'react-bootstrap/Container'
-import { Nav, Navbar, Row, Col } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 import { NavLink, Link } from "react-router-dom"
 
 const Navigation = () => {
@@ -13,7 +13,7 @@ const Navigation = () => {
                 <Navbar.Brand >
                     <NavLink to={"/"}>
                         <img
-                            src="https://static.vecteezy.com/system/resources/previews/010/595/118/non_2x/headstone-icon-gothic-gravestone-with-skull-flowers-rip-text-creepy-cemetery-grave-black-outline-simple-sketch-isolated-on-white-clipart-for-halloween-decor-logo-apps-print-vector.jpg"
+                            src="https://thumbs.dreamstime.com/b/sitio-web-muerto-en-tumba-sobre-fondo-negro-dead-grave-black-background-de-cierre-197044658.jpg"
                             width="50"
                             height="50"
                             className="navbarImg"
