@@ -1,4 +1,17 @@
-     .imageHomePage {
-         width: 400px;
-         height: 250px;
-     }
+.carouselCaption {
+    margin-top: 80px;
+    color: white;
+}
+
+.carouselCaption Link {
+    text-decoration: none;
+}
+
+.carouselImages {
+    top: 150px;
+}
+
+.textLink {
+    text-decoration: none;
+    color: white;
+}
