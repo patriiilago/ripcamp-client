@@ -20,8 +20,8 @@ h1 {
 }
 
 .ms-3 {
-    background-color: #2B3035 !important;
-    border-color: #2B3035 !important;
+    background-color: #212529 !important;
+    border-color: #212529 !important;
     color: white !important;
     outline: none !important;
     box-shadow: none !important;
@@ -30,7 +30,7 @@ h1 {
 .ms-3:hover,
 .ms-3:active,
 .ms-3:focus {
-    background-color: #2B3035 !important;
-    border-color: #2B3035 !important;
+    background-color: #212529 !important;
+    border-color: #212529 !important;
     color: white !important;
 }

@@ -1,5 +1,6 @@
-import { CardGroup, Card, Row, Col, Container } from "react-bootstrap"
+import { CardGroup, Card, Row, Col, Container, Button } from "react-bootstrap"
 import './../ProjectsPage/ProjectsPage.css'
+import { Link } from "react-router-dom";
 
 
 const Projects = () => {
@@ -153,7 +154,7 @@ const Projects = () => {
                             <Card className="ProjectCard h-100">
                                 <Card.Img className="ImgCard"
                                     variant="top"
-                                    src="https://sceglifornitore.it/blog/wp-content/uploads/2021/02/data-analyst.png"
+                                    src="https://owiusmadrid.com/wp-content/uploads/2019/10/Desarrollo-Web.png"
                                     alt="Data Project 3" />
                                 <Card.Body>
                                     <Card.Title>Project #3: MIEDITO</Card.Title>
@@ -171,12 +172,16 @@ const Projects = () => {
                                     </Card.Text >
 
                                 </Card.Body>
-
                             </Card>
                         </Col>
-
-
                     </Row>
+
+                    <Link to={"/"}>
+                        <Button variant="dark mt-5 mb-5" size="lg">
+                            🔙 Back to Home
+                        </Button>
+                    </Link>
+
 
                 </CardGroup>
             </Container >

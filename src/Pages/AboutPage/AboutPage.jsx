@@ -1,7 +1,6 @@
-import { Container } from 'react-bootstrap'
+import { Container, Button } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 import './AboutPage.css'
-import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 
 const AboutPage = () => {
