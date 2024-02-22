@@ -29,7 +29,7 @@ const AppRoutes = () => {
                 <Route path="/request/edit/:requestId" element={<EditRequestForm />} />
                 <Route path="/request-list" element={<RequestsPage />} />
                 <Route path="/request-form" element={<NewRequestForm />} />
-                <Route path="/request-list/:requestId" element={<ResponseRequest />} />
+                <Route path="/requests/:requestId" element={<ResponseRequest />} />
 
                 <Route path="*" element={<NotFoundPage />} />
 

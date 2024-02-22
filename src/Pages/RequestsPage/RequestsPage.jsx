@@ -79,7 +79,7 @@ const RequestsPage = () => {
 
 
 
-                                            <ResponseRequest />
+                                            <ResponseRequest request={request} />
 
 
 
