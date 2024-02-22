@@ -79,7 +79,7 @@ const RequestsPage = () => {
 
 
 
-                                            <ResponseRequest request={request} />
+                                            <ResponseRequest request={request} loadRequests={loadRequests} />
 
 
 
