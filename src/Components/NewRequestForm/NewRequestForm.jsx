@@ -16,7 +16,8 @@ const NewRequestForm = () => {
         type: "",
         tags: "",
         title: "",
-        description: ""
+        description: "",
+        response: false,
     })
 
     const navigate = useNavigate()
@@ -153,7 +154,7 @@ const NewRequestForm = () => {
 
 
 
-                <Button variant="dark" type="submit" value='New Request'>New Request</Button>
+                <Button variant="dark mb-5" type="submit" value='New Request'>New Request</Button>
 
             </Form>
 

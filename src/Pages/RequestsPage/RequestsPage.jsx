@@ -51,8 +51,8 @@ const RequestsPage = () => {
                                     <Card style={{ width: '40rem' }}>
 
                                         <ListGroup className="list-group-flush">
-                                            <ListGroup.Item><strong>Responsed:  </strong> {request.response ? "✅" : "❌"}</ListGroup.Item>
-                                            <ListGroup.Item><strong>Nombre: </strong> {request.name}</ListGroup.Item>
+                                            <ListGroup.Item><strong>Responded:  </strong> {request.response ? "✅" : "❌"}</ListGroup.Item>
+                                            <ListGroup.Item><strong>Name: </strong> {request.name}</ListGroup.Item>
                                             <ListGroup.Item><strong>Email: </strong> {request.email}</ListGroup.Item>
                                             <ListGroup.Item><strong>Project: </strong> {request.project}</ListGroup.Item>
                                             <ListGroup.Item><strong>Type: </strong>{request.type}</ListGroup.Item>

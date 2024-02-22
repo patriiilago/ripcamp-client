@@ -38,11 +38,23 @@ const AboutPage = () => {
                 </Link>
             </div>
 
+            <p> <strong>Scan me for request!</strong></p>
+            {" "}
 
+
+            <Image
+                className="QR"
+                src="https://qr-codes-svg.s3.amazonaws.com/CicGOK.svg?1708620619399" />
+
+            {" "}
 
             <Link to={"/"}>
                 <Button variant="dark" > 🔙 Back to Home</Button>
             </Link>
+
+
+
+
 
         </Container>
     )

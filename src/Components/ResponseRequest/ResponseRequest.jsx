@@ -1,6 +1,7 @@
 import { Container, Accordion, Button, Form, FloatingLabel } from "react-bootstrap"
 import { useState } from "react"
 import axios from "axios"
+import './ResponseRequest.css'
 
 const API_URL = "http://localhost:5005"
 
@@ -45,12 +46,14 @@ const ResponseRequest = ({ request, loadRequests }) => {
                                     />
                                 </FloatingLabel>
 
-                                <Button type="submit" className="mt-2 mb-2" variant="dark">Senddd response</Button>
+                                <Button type="submit" className="mt-2 mb-2" variant="dark">Send response</Button>
                             </Form>
 
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
+
+
             }
 
         </Container>

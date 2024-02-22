@@ -5,7 +5,6 @@ import { NavLink, Link } from "react-router-dom"
 const Navigation = () => {
 
 
-    // TODO: CAMBIAR COPIA PARA QUE NUEVA REQUEST APAREZCA ARRIBA EN LA LISTA
 
     return (
         <Navbar bg="dark" data-bs-theme="dark" expand="lg" >
@@ -22,8 +21,8 @@ const Navigation = () => {
                     </NavLink>
                 </Navbar.Brand >
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="justify-content-end">
+                <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
+                    <Nav>
                         <Link className='nav-link' to={"/"}>🏠 Home</Link>
                         <Link className='nav-link' to={"/projects"}> 💻 Projects</Link>
                         <Link className='nav-link' to={"/alumni"}> 👩🏼‍🏫 Alumni</Link>

@@ -18,7 +18,6 @@ const EditRequestForm = () => {
     })
 
 
-    //TODO : PASAR AL FORM TODOS LOS REGISTROS DE LA API
 
     const { requestId } = useParams()
 
