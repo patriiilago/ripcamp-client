@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import './AlumniDetailsPage.css'
 
-const API_URL = "http://localhost:5005/alumni"
+const API_URL = "https://ripcamp-server.fly.dev"
 
 const AlumniDetailsPage = () => {
 
@@ -18,7 +18,7 @@ const AlumniDetailsPage = () => {
 
   const loadAlumni = () => {
     axios
-      .get(`${API_URL}/${alumniId}`)
+      .get(`${API_URL}/alumni/${alumniId}`)
       .then(response => {
         setAlumni(response.data)
         setIsLoading(false)

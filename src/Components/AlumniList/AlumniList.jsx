@@ -3,7 +3,7 @@ import axios from "axios"
 import AlumniCard from './../AlumniCard/AlumniCard'
 import { Container } from "react-bootstrap"
 
-const API_URL = "http://localhost:5005/alumni"
+const API_URL = "https://ripcamp-server.fly.dev"
 
 
 const AlumniList = () => {
@@ -14,7 +14,7 @@ const AlumniList = () => {
 
     const loadAlumni = () => {
         axios
-            .get(`${API_URL}`)
+            .get(`${API_URL}/alumni`)
             .then(({ data }) => setAlumnis(data))
             .catch(err => console.log(err))
     }

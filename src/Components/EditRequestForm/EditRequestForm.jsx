@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { Container, Form, FloatingLabel, Button } from "react-bootstrap"
 
-const API_URL = "http://localhost:5005"
+const API_URL = "https://ripcamp-server.fly.dev"
 
 const EditRequestForm = () => {
 

@@ -6,7 +6,7 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import ResponseRequest from "../../Components/ResponseRequest/ResponseRequest"
 
 
-const API_URL = "http://localhost:5005"
+const API_URL = "https://ripcamp-server.fly.dev"
 
 const RequestsPage = () => {
 
