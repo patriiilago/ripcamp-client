@@ -44,7 +44,7 @@ const AboutPage = () => {
 
             <Image
                 className="QR"
-                src="https://qr-codes-svg.s3.amazonaws.com/CicGOK.svg?1708620619399" />
+                src="https://qr-codes-svg.s3.amazonaws.com/N2gkZP.svg?1708683136423" />
 
             {" "}
 
